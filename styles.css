@@ -690,6 +690,13 @@ textarea:focus {
   color: var(--muted);
 }
 
+.site-footer .disclaimer {
+  max-width: 620px;
+  margin-top: 14px;
+  color: #a99a82;
+  font-size: 12px;
+}
+
 .site-footer div:last-child {
   display: grid;
   gap: 8px;
