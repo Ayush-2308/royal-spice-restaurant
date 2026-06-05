@@ -71,6 +71,8 @@ const tabs = document.querySelectorAll(".tab");
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 const reservationForm = document.querySelector("#reservationForm");
+const header = document.querySelector(".site-header");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function createWhatsAppUrl(message) {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -94,6 +96,11 @@ function renderMenu(filter = "all") {
       </article>
     `;
   }).join("");
+
+  menuGrid.querySelectorAll(".menu-item").forEach((item, index) => {
+    item.style.animationDelay = `${index * 45}ms`;
+    applyTilt(item);
+  });
 }
 
 tabs.forEach((tab) => {
@@ -132,4 +139,55 @@ reservationForm.addEventListener("submit", (event) => {
   window.open(createWhatsAppUrl(message), "_blank", "noopener");
 });
 
+function updateHeader() {
+  header.classList.toggle("scrolled", window.scrollY > 24);
+}
+
+function initReveal() {
+  const revealItems = document.querySelectorAll(".reveal, .feature-grid article, .events-grid article, .review-grid blockquote, .faq details");
+
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("in-view"));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14, rootMargin: "0px 0px -40px 0px" });
+
+  revealItems.forEach((item, index) => {
+    item.classList.add("reveal");
+    item.style.transitionDelay = `${Math.min(index * 35, 240)}ms`;
+    observer.observe(item);
+  });
+}
+
+function applyTilt(card) {
+  if (prefersReducedMotion) return;
+
+  card.addEventListener("mousemove", (event) => {
+    const rect = card.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `translateY(-7px) rotateX(${y * -3}deg) rotateY(${x * 3}deg)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "";
+  });
+}
+
+function initTilt() {
+  document.querySelectorAll(".feature-grid article, .events-grid article").forEach(applyTilt);
+}
+
+window.addEventListener("scroll", updateHeader, { passive: true });
+updateHeader();
+initReveal();
 renderMenu();
+initTilt();

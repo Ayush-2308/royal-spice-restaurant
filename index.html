@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="page-glow" aria-hidden="true"></div>
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="Royal Spice Restaurant home">
       <span class="brand-mark">RS</span>
@@ -35,12 +36,17 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero reveal">
       <video class="hero-video" autoplay muted loop playsinline poster="https://images.pexels.com/photos/20104485/pexels-photo-20104485.jpeg?auto=compress&cs=tinysrgb&w=1800">
         <source src="https://videos.pexels.com/video-files/19905887/19905887-hd_1920_1080_25fps.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
       <div class="hero-content">
+        <div class="hero-kicker">
+          <span>Fine Dining</span>
+          <span>Private Events</span>
+          <span>WhatsApp Orders</span>
+        </div>
         <p class="eyebrow">Bandra West, Mumbai</p>
         <h1>Royal Indian fine dining, staged with warmth and theatre.</h1>
         <p class="hero-copy">Reserve a candlelit table, order signature biryanis on WhatsApp, or host a private celebration in a black-and-gold dining room built for memorable evenings.</p>
@@ -55,10 +61,12 @@
         </div>
       </div>
       <aside class="hero-card" aria-label="Tonight availability">
+        <span class="live-dot">Live availability</span>
         <p>Tonight's Table Window</p>
         <strong>7:30 PM - 10:45 PM</strong>
         <span>Live ghazal on Friday, chef's kebab trolley on Saturday.</span>
       </aside>
+      <a class="scroll-cue" href="#gallery" aria-label="Scroll to gallery"><span></span></a>
     </section>
 
     <section class="trust-strip" aria-label="Trust markers">
@@ -68,7 +76,19 @@
       <span>UPI, cards and corporate billing</span>
     </section>
 
-    <section class="section split intro">
+    <section class="marquee" aria-label="Restaurant highlights">
+      <div>
+        <span>Chef-led tasting menu</span>
+        <span>Royal private dining</span>
+        <span>Premium WhatsApp ordering</span>
+        <span>Luxury event hosting</span>
+        <span>Signature Indian grills</span>
+        <span>Chef-led tasting menu</span>
+        <span>Royal private dining</span>
+      </div>
+    </section>
+
+    <section class="section split intro reveal">
       <div>
         <p class="eyebrow">Premium Dining</p>
         <h2>A modern royal room for business dinners, family milestones, and quiet celebrations.</h2>
@@ -76,21 +96,21 @@
       <p>Royal Spice Restaurant pairs North Indian classics with coastal touches, slow-cooked gravies, hand-pounded masalas, and a wine-and-mocktail list curated for spice-forward food. Service is polished, personal, and designed to move guests from discovery to reservation fast.</p>
     </section>
 
-    <section class="section gallery" id="gallery">
+    <section class="section gallery reveal" id="gallery">
       <div class="section-heading">
         <p class="eyebrow">Food Gallery</p>
         <h2>High-end plates, warm lighting, and a dining room guests remember.</h2>
       </div>
       <div class="gallery-grid">
-        <figure class="wide"><img src="https://images.pexels.com/photos/20104485/pexels-photo-20104485.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Luxury restaurant interior with warm golden lighting"></figure>
-        <figure><img src="https://images.pexels.com/photos/28674660/pexels-photo-28674660.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Chicken biryani served with spicy curry"></figure>
-        <figure><img src="https://images.pexels.com/photos/29850004/pexels-photo-29850004.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Indian feast with curries naan and biryani"></figure>
-        <figure><img src="https://images.pexels.com/photos/36630804/pexels-photo-36630804.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Chef plating a gourmet dish in a restaurant kitchen"></figure>
-        <figure class="tall"><img src="https://images.pexels.com/photos/32825915/pexels-photo-32825915.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Biryani with sides and Indian spices on a dark table"></figure>
+        <figure class="wide"><img src="https://images.pexels.com/photos/20104485/pexels-photo-20104485.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Luxury restaurant interior with warm golden lighting"><figcaption>Candlelit Dining Room</figcaption></figure>
+        <figure><img src="https://images.pexels.com/photos/28674660/pexels-photo-28674660.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Chicken biryani served with spicy curry"><figcaption>Signature Biryani</figcaption></figure>
+        <figure><img src="https://images.pexels.com/photos/29850004/pexels-photo-29850004.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Indian feast with curries naan and biryani"><figcaption>Royal Feast</figcaption></figure>
+        <figure><img src="https://images.pexels.com/photos/36630804/pexels-photo-36630804.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Chef plating a gourmet dish in a restaurant kitchen"><figcaption>Chef's Pass</figcaption></figure>
+        <figure class="tall"><img src="https://images.pexels.com/photos/32825915/pexels-photo-32825915.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Biryani with sides and Indian spices on a dark table"><figcaption>Tableside Spice</figcaption></figure>
       </div>
     </section>
 
-    <section class="section menu-section" id="menu">
+    <section class="section menu-section reveal" id="menu">
       <div class="section-heading">
         <p class="eyebrow">Interactive Menu</p>
         <h2>Signature dishes with clear pricing for dine-in and WhatsApp orders.</h2>
@@ -105,7 +125,7 @@
       <div class="menu-grid" id="menuGrid"></div>
     </section>
 
-    <section class="section featured">
+    <section class="section featured reveal">
       <div class="section-heading">
         <p class="eyebrow">Featured Dishes</p>
         <h2>Royal Spice signatures built for photography, repeat orders, and premium ticket size.</h2>
@@ -141,7 +161,7 @@
       </div>
     </section>
 
-    <section class="video-band">
+    <section class="video-band reveal">
       <video autoplay muted loop playsinline poster="https://images.pexels.com/photos/36630804/pexels-photo-36630804.jpeg?auto=compress&cs=tinysrgb&w=1600">
         <source src="https://videos.pexels.com/video-files/3338747/3338747-hd_1920_1080_24fps.mp4" type="video/mp4">
       </video>
@@ -152,7 +172,7 @@
       </div>
     </section>
 
-    <section class="section chef" id="chef">
+    <section class="section chef reveal" id="chef">
       <img src="https://images.pexels.com/photos/4253302/pexels-photo-4253302.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Executive chef in a professional restaurant kitchen">
       <div>
         <p class="eyebrow">Executive Chef</p>
@@ -166,7 +186,7 @@
       </div>
     </section>
 
-    <section class="section reservation-wrap" id="reserve">
+    <section class="section reservation-wrap reveal" id="reserve">
       <div class="reservation-copy">
         <p class="eyebrow">Reservations</p>
         <h2>Turn interest into confirmed tables.</h2>
@@ -194,7 +214,7 @@
       </form>
     </section>
 
-    <section class="section events" id="events">
+    <section class="section events reveal" id="events">
       <div class="section-heading">
         <p class="eyebrow">Events</p>
         <h2>Private dining packages for celebrations and business hosting.</h2>
@@ -206,7 +226,7 @@
       </div>
     </section>
 
-    <section class="section reviews" id="reviews">
+    <section class="section reviews reveal" id="reviews">
       <div class="section-heading">
         <p class="eyebrow">Customer Reviews</p>
         <h2>Social proof that reassures guests before they book.</h2>
@@ -218,7 +238,7 @@
       </div>
     </section>
 
-    <section class="section info-map">
+    <section class="section info-map reveal">
       <div class="info-panel">
         <p class="eyebrow">Visit Us</p>
         <h2>Royal Spice Restaurant</h2>
@@ -234,7 +254,7 @@
       <iframe title="Google map showing Carter Road, Bandra West, Mumbai" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Carter%20Road%20Bandra%20West%20Mumbai%20400050&output=embed"></iframe>
     </section>
 
-    <section class="section faq" id="faq">
+    <section class="section faq reveal" id="faq">
       <div class="section-heading">
         <p class="eyebrow">FAQ</p>
         <h2>Answers that remove friction before reservation.</h2>
