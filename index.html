@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Royal Spice Restaurant in Bandra, Mumbai offers premium Indian fine dining, chef-led tasting menus, private events, reservations, and WhatsApp ordering.">
+  <title>Royal Spice Restaurant | Premium Indian Fine Dining</title>
+  <link rel="preconnect" href="https://images.pexels.com">
+  <link rel="preconnect" href="https://videos.pexels.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Royal Spice Restaurant home">
+      <span class="brand-mark">RS</span>
+      <span>
+        <strong>Royal Spice</strong>
+        <small>Restaurant</small>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#events">Events</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#reserve">Reserve</a>
+    </nav>
+    <a class="header-cta" href="#reserve">Book a Table</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline poster="https://images.pexels.com/photos/20104485/pexels-photo-20104485.jpeg?auto=compress&cs=tinysrgb&w=1800">
+        <source src="https://videos.pexels.com/video-files/19905887/19905887-hd_1920_1080_25fps.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Bandra West, Mumbai</p>
+        <h1>Royal Indian fine dining, staged with warmth and theatre.</h1>
+        <p class="hero-copy">Reserve a candlelit table, order signature biryanis on WhatsApp, or host a private celebration in a black-and-gold dining room built for memorable evenings.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#reserve">Reserve Tonight</a>
+          <a class="btn btn-ghost" href="https://wa.me/918273126155?text=Hi%20Royal%20Spice%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+        </div>
+        <div class="hero-stats" aria-label="Restaurant highlights">
+          <span><strong>4.8</strong> Google rating</span>
+          <span><strong>32</strong> chef specials</span>
+          <span><strong>₹1,850</strong> tasting menu</span>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Tonight availability">
+        <p>Tonight's Table Window</p>
+        <strong>7:30 PM - 10:45 PM</strong>
+        <span>Live ghazal on Friday, chef's kebab trolley on Saturday.</span>
+      </aside>
+    </section>
+
+    <section class="trust-strip" aria-label="Trust markers">
+      <span>Open daily</span>
+      <span>Private dining for 12-80 guests</span>
+      <span>FSSAI licensed kitchen</span>
+      <span>UPI, cards and corporate billing</span>
+    </section>
+
+    <section class="section split intro">
+      <div>
+        <p class="eyebrow">Premium Dining</p>
+        <h2>A modern royal room for business dinners, family milestones, and quiet celebrations.</h2>
+      </div>
+      <p>Royal Spice Restaurant pairs North Indian classics with coastal touches, slow-cooked gravies, hand-pounded masalas, and a wine-and-mocktail list curated for spice-forward food. Service is polished, personal, and designed to move guests from discovery to reservation fast.</p>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">Food Gallery</p>
+        <h2>High-end plates, warm lighting, and a dining room guests remember.</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="wide"><img src="https://images.pexels.com/photos/20104485/pexels-photo-20104485.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Luxury restaurant interior with warm golden lighting"></figure>
+        <figure><img src="https://images.pexels.com/photos/28674660/pexels-photo-28674660.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Chicken biryani served with spicy curry"></figure>
+        <figure><img src="https://images.pexels.com/photos/29850004/pexels-photo-29850004.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Indian feast with curries naan and biryani"></figure>
+        <figure><img src="https://images.pexels.com/photos/36630804/pexels-photo-36630804.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Chef plating a gourmet dish in a restaurant kitchen"></figure>
+        <figure class="tall"><img src="https://images.pexels.com/photos/32825915/pexels-photo-32825915.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Biryani with sides and Indian spices on a dark table"></figure>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive Menu</p>
+        <h2>Signature dishes with clear pricing for dine-in and WhatsApp orders.</h2>
+      </div>
+      <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+        <button class="tab active" data-filter="all" type="button">All</button>
+        <button class="tab" data-filter="signature" type="button">Signature</button>
+        <button class="tab" data-filter="vegetarian" type="button">Vegetarian</button>
+        <button class="tab" data-filter="grill" type="button">Tandoor</button>
+        <button class="tab" data-filter="dessert" type="button">Dessert</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <section class="section featured">
+      <div class="section-heading">
+        <p class="eyebrow">Featured Dishes</p>
+        <h2>Royal Spice signatures built for photography, repeat orders, and premium ticket size.</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <img src="https://images.pexels.com/photos/32825912/pexels-photo-32825912.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Vegetarian biryani in a copper bowl">
+          <div>
+            <span>Chef's pick</span>
+            <h3>Dum Pukht Nalli Biryani</h3>
+            <p>Six-hour lamb shank, saffron rice, bone marrow jus, burani raita.</p>
+            <strong>₹1,295</strong>
+          </div>
+        </article>
+        <article>
+          <img src="https://images.pexels.com/photos/5410410/pexels-photo-5410410.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Garnished biryani on a plate">
+          <div>
+            <span>Best for delivery</span>
+            <h3>Royal Awadhi Chicken Biryani</h3>
+            <p>Layered basmati, free-range chicken, fried onion, mint, salan.</p>
+            <strong>₹945</strong>
+          </div>
+        </article>
+        <article>
+          <img src="https://images.pexels.com/photos/12392831/pexels-photo-12392831.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Traditional biryani platter with sides">
+          <div>
+            <span>Weekend special</span>
+            <h3>Coastal Pepper Prawn Curry</h3>
+            <p>Fresh prawns, roasted coconut, curry leaf tadka, appam crisps.</p>
+            <strong>₹1,150</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="video-band">
+      <video autoplay muted loop playsinline poster="https://images.pexels.com/photos/36630804/pexels-photo-36630804.jpeg?auto=compress&cs=tinysrgb&w=1600">
+        <source src="https://videos.pexels.com/video-files/3338747/3338747-hd_1920_1080_24fps.mp4" type="video/mp4">
+      </video>
+      <div>
+        <p class="eyebrow">Chef's Counter</p>
+        <h2>Every plate leaves the pass with a final flourish.</h2>
+        <a class="btn btn-primary" href="#reserve">Book Chef's Table</a>
+      </div>
+    </section>
+
+    <section class="section chef" id="chef">
+      <img src="https://images.pexels.com/photos/4253302/pexels-photo-4253302.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Executive chef in a professional restaurant kitchen">
+      <div>
+        <p class="eyebrow">Executive Chef</p>
+        <h2>Chef Armaan Kapoor</h2>
+        <p>After leading hotel kitchens in Delhi, Jaipur, and Dubai, Chef Armaan created Royal Spice around slow fire, seasonal Indian produce, and the generosity of old royal kitchens. His tasting menu changes monthly and every private event receives a dedicated menu consultation.</p>
+        <div class="chef-highlights">
+          <span>18 years</span>
+          <span>Hotel-trained team</span>
+          <span>Monthly tasting menu</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reservation-wrap" id="reserve">
+      <div class="reservation-copy">
+        <p class="eyebrow">Reservations</p>
+        <h2>Turn interest into confirmed tables.</h2>
+        <p>Guests can reserve instantly, request private dining, or move to WhatsApp for high-intent ordering. The form is designed to capture the details a restaurant team needs before calling back.</p>
+        <ul>
+          <li>Table bookings for 2-18 guests</li>
+          <li>Birthday, anniversary, and corporate dining notes</li>
+          <li>WhatsApp confirmation within 10 minutes during open hours</li>
+        </ul>
+      </div>
+      <form class="reservation-form" id="reservationForm">
+        <label>Full name <input name="name" type="text" autocomplete="name" required></label>
+        <label>Mobile number <input name="phone" type="tel" autocomplete="tel" required></label>
+        <div class="form-row">
+          <label>Date <input name="date" type="date" required></label>
+          <label>Time <input name="time" type="time" required></label>
+        </div>
+        <div class="form-row">
+          <label>Guests <select name="guests" required><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option><option>10+</option></select></label>
+          <label>Occasion <select name="occasion"><option>Dinner</option><option>Birthday</option><option>Anniversary</option><option>Corporate</option><option>Private dining</option></select></label>
+        </div>
+        <label>Special request <span class="field-help">Dietary needs, seating preference, cake, flowers, or event notes</span><textarea name="notes" rows="4"></textarea></label>
+        <button class="btn btn-primary" type="submit">Send Reservation on WhatsApp</button>
+        <p class="form-note">Or call <a href="tel:+918273126155">+91 82731 26155</a> after 11:30 AM.</p>
+      </form>
+    </section>
+
+    <section class="section events" id="events">
+      <div class="section-heading">
+        <p class="eyebrow">Events</p>
+        <h2>Private dining packages for celebrations and business hosting.</h2>
+      </div>
+      <div class="events-grid">
+        <article><span>12-24 guests</span><h3>Maharaja Room</h3><p>Private room, fixed menu from ₹2,400 per guest, dedicated captain, projector on request.</p></article>
+        <article><span>25-80 guests</span><h3>Royal Buyout</h3><p>Full dining room for engagements, launches, and festive dinners from ₹3.2L minimum spend.</p></article>
+        <article><span>Every Friday</span><h3>Ghazal Dinner</h3><p>Live ghazal set, kebab tasting board, and paired zero-proof cocktails from 8:30 PM.</p></article>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="section-heading">
+        <p class="eyebrow">Customer Reviews</p>
+        <h2>Social proof that reassures guests before they book.</h2>
+      </div>
+      <div class="review-grid">
+        <blockquote><p>"The dining room feels cinematic, the service team remembered our anniversary, and the nalli biryani was genuinely luxurious."</p><cite>Priya Mehra, Bandra</cite></blockquote>
+        <blockquote><p>"We hosted a 38-person client dinner. The menu planning, timing, and billing were smoother than most five-star venues."</p><cite>Rohan Shah, BKC</cite></blockquote>
+        <blockquote><p>"Ordered on WhatsApp for a family dinner. Packaging was premium, food arrived hot, and the butter chicken was outstanding."</p><cite>Nadia Fernandes, Khar</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="section info-map">
+      <div class="info-panel">
+        <p class="eyebrow">Visit Us</p>
+        <h2>Royal Spice Restaurant</h2>
+        <p>21, Carter Road, Bandra West, Mumbai, Maharashtra 400050</p>
+        <div class="hours">
+          <strong>Opening Hours</strong>
+          <span>Monday - Thursday: 12:00 PM - 11:30 PM</span>
+          <span>Friday - Sunday: 12:00 PM - 12:30 AM</span>
+          <span>Lunch delivery: 12:00 PM - 4:00 PM</span>
+        </div>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Carter+Road+Bandra+West+Mumbai+400050" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+      <iframe title="Google map showing Carter Road, Bandra West, Mumbai" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Carter%20Road%20Bandra%20West%20Mumbai%20400050&output=embed"></iframe>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>Answers that remove friction before reservation.</h2>
+      </div>
+      <div class="faq-list">
+        <details open><summary>Do you accept same-day reservations?</summary><p>Yes. Same-day reservations are accepted until 10:30 PM, subject to table availability. WhatsApp confirmations are usually sent within 10 minutes during open hours.</p></details>
+        <details><summary>Can I order food directly on WhatsApp?</summary><p>Yes. Tap any WhatsApp order button and our team will confirm availability, delivery radius, payment link, and dispatch time.</p></details>
+        <details><summary>Do you offer private dining?</summary><p>Yes. The Maharaja Room hosts 12-24 guests, while full buyouts are available for 25-80 guests with fixed menus and event support.</p></details>
+        <details><summary>Are vegetarian and Jain options available?</summary><p>Yes. The menu includes vegetarian signatures, and Jain preparations can be arranged with advance notice.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Royal Spice Restaurant</strong>
+      <p>Premium Indian dining, private events, and WhatsApp ordering in Bandra West.</p>
+    </div>
+    <div>
+      <a href="tel:+918273126155">+91 82731 26155</a>
+      <a href="mailto:reservations@royalspicerestaurant.in">reservations@royalspicerestaurant.in</a>
+      <a href="https://wa.me/918273126155?text=Hi%20Royal%20Spice%2C%20I%20want%20to%20order%20food." target="_blank" rel="noopener">WhatsApp Orders</a>
+    </div>
+  </footer>
+
+  <div class="sticky-cta">
+    <a href="#reserve">Reserve</a>
+    <a href="https://wa.me/918273126155?text=Hi%20Royal%20Spice%2C%20I%20want%20to%20order%20food." target="_blank" rel="noopener">WhatsApp Order</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
